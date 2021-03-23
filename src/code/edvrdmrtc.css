@@ -1,0 +1,629 @@
+/*
+
+edvrdmrtc.css
+_________
+
+© EdouardMortec 2018 - http://www.edouardmortec.com
+
+*/
+
+/*------------------------------------------------------------------RESET CSS*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   */
+   html, body, div, span, applet, object, iframe,
+   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+   a, abbr, acronym, address, big, cite, code,
+   del, dfn, em, img, ins, kbd, q, s, samp,
+   small, strike, strong, sub, sup, tt, var,
+   b, u, i, center,
+   dl, dt, dd, ol, ul, li,
+   fieldset, form, label, legend,
+   table, caption, tbody, tfoot, thead, tr, th, td,
+   article, aside, canvas, details, embed, 
+   figure, figcaption, footer, header, hgroup, 
+   menu, nav, output, ruby, section, summary,
+   time, mark, audio, video {
+   	margin: 0;
+   	padding: 0;
+   	border: 0;
+   	font-size: 100%;
+   	font: inherit;
+   	vertical-align: baseline;
+   }
+   /* HTML5 display-role reset for older browsers */
+   article, aside, details, figcaption, figure, 
+   footer, header, hgroup, menu, nav, section {
+   	display: block;
+   }
+   body {
+   	line-height: 1;
+   }
+   ol, ul {
+   	list-style: none;
+   }
+   blockquote, q {
+   	quotes: none;
+   }
+   blockquote:before, blockquote:after,
+   q:before, q:after {
+   	content: '';
+   	content: none;
+   }
+   table {
+   	border-collapse: collapse;
+   	border-spacing: 0;
+   }
+
+
+
+
+/* cursor pics
+:root {
+  --closeIcon : url("src/StrokeIcon_(4).png");
+  --linkIcon : url("src/StrokeIcon_(34).png");
+  --seeIcon : url("src/StrokeIcon_(43).png");
+  --downloadIcon : url("src/StrokeIcon_(46).png");
+  --topIcon : url("src/StrokeIcon_(48).png");
+  --navrightIcon : url("src/StrokeIcon_(101).png");
+  --navleftIcon : url("src/StrokeIcon_(102).png");
+  --zoomoutIcon : url("src/StrokeIcon_(107).png");
+  --zoominIcon : url("src/StrokeIcon_(108).png");
+  --infoIcon : url("src/StrokeIcon_(143).png");
+  }*/
+
+
+  /*------------------------------------------------------------------BEGIN CSS*/
+
+
+  @font-face {
+  	font-family: 'Orator Std';
+  	src: url('../fonts/OratorStd.eot');
+  	src: url('../fonts/OratorStd.eot?#iefix') format('embedded-opentype'),
+  	url('../fonts/OratorStd.woff2') format('woff2'),
+  	url('../fonts/OratorStd.woff') format('woff'),
+  	url('../fonts/OratorStd.ttf') format('truetype'),
+  	url('../fonts/OratorStd.svg#OratorStd') format('svg');
+  	font-weight: normal;
+  	font-style: normal;
+  }
+
+  @font-face {
+  	font-family: 'NevenkaOblique';
+  	src: url('../fonts/NevenkaOblique.eot');
+  	src: url('../fonts/NevenkaOblique.eot?#iefix') format('embedded-opentype'),
+  	url('../fonts/NevenkaOblique.woff2') format('woff2'),
+  	url('../fonts/NevenkaOblique.woff') format('woff'),
+  	url('../fonts/NevenkaOblique.ttf') format('truetype'),
+  	url('../fonts/NevenkaOblique.svg#NevenkaOblique') format('svg');
+  	font-weight: normal;
+  	font-style: normal;
+  }
+
+  @font-face {
+  	font-family: 'D-DIN';
+  	src: url('../fonts/D-DIN.eot');
+  	src: url('../fonts/D-DIN.eot?#iefix') format('embedded-opentype'),
+  	url('../fonts/D-DIN.woff2') format('woff2'),
+  	url('../fonts/D-DIN.woff') format('woff'),
+  	url('../fonts/D-DIN.ttf') format('truetype'),
+  	url('../fonts/D-DIN.svg#D-DIN') format('svg');
+  	font-weight: normal;
+  	font-style: normal;
+  }
+
+
+
+
+  body {
+
+  	background-color: white;
+  	background-image: url(../img/bg-image.jpg);
+  	background-repeat: repeat;
+
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+  }
+
+
+
+
+  p{
+  	font-family: 'D-DIN',Helevetica,  Arial, sans-serif;
+  	font-size:  1em;
+  	color: black;
+  	text-align: left;
+  }
+
+  label {
+  	font-family: 'D-DIN',Helevetica,  Arial, sans-serif;
+  	font-size:  0.9em;
+  	color: black;
+  	text-align: center;
+  }
+
+
+
+
+  .Artwork {
+  	width: 100vw;
+  	height: calc(100vh - 23.5vh);
+    padding: 2.5vh 0 21vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 0;
+    /* overflow: hidden; */
+    top: 0px; 
+  }
+
+  .Cover {
+    width: 100%;
+    height: calc(100vh - 23.5vh);
+    position: relative;
+    overflow: hidden;
+    top: -2.5vh;
+  }
+
+  .CoverPicture {
+    width : 100%;
+    position: absolute;
+    top: -30%;
+    left: 0px;
+  }
+
+  .CoverPicture:hover {
+  	cursor: url("../cursors/StrokeIconWhite_(101).png"), pointer;	
+  }
+
+  .Picture {
+  	box-shadow: 1px 2px 4px rgba(0, 0, 0, .4);
+  	max-width: 80%;
+  	max-height: 75%;
+  	margin: 0em 0 1em 0;
+  }
+
+  /* .Picture:hover {
+  	cursor: url("src/cursors/StrokeIconWhite_(101).png"), pointer;	
+  } */
+
+  .Caption {
+  	font-family: "NevenkaOblique", Helevetica, Arial, sans-serif;
+  	font-style: normal;
+  	font-size:  0.9em;
+  	color: gray;
+  	text-align: center;
+  	margin: 1em 0 2em 0;
+  }
+
+
+  /*------------------------------------------------------------------NAV*/
+
+  nav {
+    /* background-color: #fff; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+  	position: fixed;
+  	list-style:none;
+
+  	width: 100vw;
+  	height: 21vh;
+    bottom:   0px;
+  	z-index: 2;
+  }
+
+
+  .navLeft{
+  	position: fixed;
+  	width:20vw;
+  	height:76vh;
+  	top:3%;
+  	left:0%;
+  	z-index: 10;
+  }
+
+  .navLeft:hover{
+  	cursor: url("../cursors/StrokeIcon_(102)_2.png"), pointer;
+  }
+
+  .navRight{
+  	position: fixed;
+  	width:20vw;
+  	height:76vh;
+  	top:3%;
+  	right: 0%;
+  	z-index: 10;
+  }
+
+  .navRight:hover{
+  	cursor: url("../cursors/StrokeIcon_(101)_2.png"), pointer;
+  }
+
+  #Title {
+    display: block;
+  	font-family: "Orator Std", Helvetica, Arial, sans-serif;
+  	font-style: normal;
+  	font-size:  1.3em;
+  	text-decoration: none;
+  	text-align: center;
+    padding: 0.5em 0em;
+    height: 1em;
+  	cursor: default;
+  }
+
+
+  #Logo {
+  	background-image: url('../img/LOGO_EM_156_N.png');
+  	background-repeat: no-repeat;
+  	background-position: center; 
+  	background-size: contain;
+    margin: 0 0 1em 0;
+    cursor: pointer; /*url("src/StrokeIcon_(143).png") 12 12, pointer;*/
+    width: 20vh;
+    height: 20vh;
+  }
+
+  #Logo:hover{
+  	opacity: 0.8;
+  }
+
+
+  /*------------------------------------------------------------------CONTACT*/
+
+
+  footer{
+  	width: 100vw;
+  	height: 95vh;
+  	display: grid;
+	  grid-template-columns: 100%;
+	  grid-template-rows: 17% 10% 10% 10% 10% 10% 33%;
+	  align-items: start;
+	  justify-items: center;
+	  align-content: start;
+  }
+
+  #bio {
+  	grid-column: 1 / span 1;
+  	grid-row: 1 / span 1;
+  	margin-top: 20px;
+  	margin-left: 20px;
+  }
+
+
+  a, #tp, #mss {
+  	font-family: "Orator Std",Helevetica,  Arial, sans-serif;
+  	font-size:  1.05em;
+  	text-decoration: none;
+  	color: black;
+  	text-align: right;
+  	cursor: url("../cursors/StrokeIcon_(34).png") 12 12, pointer;
+  	margin-top: 5px;
+  }
+
+
+
+  a:hover, #tp:hover, #mss:hover {
+  	font-size:  1.06em;
+  	opacity: 0.3;
+  }
+
+  #cv {
+  	grid-column: 1 / span 1;
+  	grid-row: 2 / span 1;
+  	cursor: url("../cursors/StrokeIcon_(46).png") 12 12, pointer; 	
+  }
+
+  #folio {
+  	grid-column: 1 / span 1;
+  	grid-row: 3 / span 1;
+  	cursor: url("../cursors/StrokeIcon_(46).png") 12 12, pointer; 	
+  }
+
+
+  #ig {
+  	grid-column: 1 / span 1;
+  	grid-row: 3 / span 1;
+  }
+
+
+  #mss {
+
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+    cursor: url("../cursors/StrokeIcon_(76).png") 12 12, pointer; 
+  }
+
+
+    #tp {
+    grid-column: 1 / span 1;
+    grid-row: 5 / span 1;
+    cursor: url("../cursors/StrokeIcon_(48).png") 12 12, pointer;   
+  }
+
+
+
+  #contactForm { 
+    display: none;
+    z-index: 5;
+    box-sizing: border-box;
+    border: 3px solid gray; 
+    border-radius: 2px;
+    padding: 1em;
+    width: 400px;
+    height: 270px;
+    text-align: center;
+    background: #fff;
+    position: fixed;
+    top:45%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%)
+  
+  }
+
+  input, textarea { 
+    margin: 1em auto;
+    font-family: "D-DIN",  Arial, sans-serif;
+    font-size:  1em;
+    text-decoration: none;
+    display: block; 
+    width: 350px; 
+    /*padding: .4em;*/
+  }
+
+  textarea { height: 100px; resize: none; }
+
+  .formBtn { 
+    width: 140px;
+    display: inline-block;
+    
+    background: gray;
+    color: #fff;
+    font-weight: 100;
+    font-size: 1em;
+    border: none;
+    border-radius: 2px;
+    height: 25px;
+    width: 70px;
+  }
+
+ 
+  #Credits {
+  	align-self: flex-end;
+  	font-family: "NevenkaOblique",Helevetica,  Arial, sans-serif;
+  	font-size:  0.8em;
+  	color: gray;
+  	text-align: left;
+  	margin-left: 15px;
+  	margin-bottom: 0px;
+  	z-index: 3;
+  }
+
+
+  .unselectable {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   -ms-user-select: none;
+   user-select: none;
+}
+
+
+
+  /*------------------------------------------------------------------ARROWS AT START*/
+
+div.Arrows {
+
+
+
+  position: fixed;
+  bottom: 2%;
+  right: 20%;
+
+  font-family: "Orator Std",Helevetica,  Arial, sans-serif;
+  line-height: 0.65;
+  font-size:  4em;
+  color: gray;
+  text-align: left;
+  z-index: 10;
+  pointer-events: none;
+
+  -webkit-animation-name: arrowsIntro;
+  -webkit-animation-duration: 15s;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+
+  -moz-animation-name: arrowsIntro;
+  -moz-animation-duration: 15s;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-direction: normal;
+  -moz-animation-fill-mode: forwards;
+
+  -ms-animation-name: arrowsIntro;
+  -ms-animation-duration: 15s;
+  -ms-animation-timing-function: ease-out;
+  -ms-animation-direction: normal;
+  -ms-animation-fill-mode: forwards;
+
+  -o-animation-name: arrowsIntro;
+  -o-animation-duration: 15s;
+  -o-animation-timing-function: ease-out;
+  -o-animation-direction: normal;
+  -o-animation-fill-mode: forwards;
+
+  animation-name: arrowsIntro;
+  animation-duration: 15s;
+  animation-timing-function: ease-out;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+
+
+@-webkit-keyframes arrowsIntro {
+  0% {opacity: 1;}
+  25% { opacity: 1;}
+  100% { opacity: 0;}
+}
+
+@-moz-keyframes arrowsIntro {
+  0% { opacity: 1;}
+  25% { opacity: 1;}
+  100% { opacity: 0;}
+}
+
+@-ms-keyframes arrowsIntro {
+  0% { opacity: 1;}
+  25% { opacity: 1;}
+  100% { opacity: 0;}
+}
+
+@-o-keyframes arrowsIntro {
+  0% { opacity: 1;}
+  25% { opacity: 1;}
+  100% { opacity: 0;}
+}
+
+@keyframes arrowsIntro {
+  0% { opacity: 1;}
+  25% { opacity: 1;}
+  100% { opacity: 0;}
+}
+
+
+  /*------------------------------------------------------------------MEDIA QUERY*/
+
+
+
+@media only screen and ( orientation: portrait ) { 
+
+
+  .Artwork {
+  	height: calc(100vh - 31vh);
+    padding: 10vh 0 21vh 0;
+  }
+
+
+  .CoverPicture {
+    width: 200%;
+    top: -10vh;
+  }
+
+
+  div.Arrows {
+    right: 5%;
+  }
+
+
+
+  .navLeft .navRight {
+
+    width: 1vw;
+
+  }
+
+  #Title {
+        font-size:  1em;
+  }
+
+
+
+
+  #Credits{ display: none; }
+
+
+  #contactForm { 
+    width: 85vw;
+    height: 60vh;
+  }
+
+  input, textarea { 
+    width: 70vw; 
+  }
+
+}
+
+
+@media only screen and ( max-device-width: 1080px) and ( orientation: landscape )  {
+
+  #Title {
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+
+  .Caption {
+    /*border: 1px solid black;*/
+    font-size:  0.8em;
+    margin-top: 4px;
+  }
+
+  #Credits{ display: none; }
+
+    #contactForm { 
+    width: 60vw;
+    height: 85vh;
+  }
+
+  input, textarea { 
+    width: 50vw;
+    margin: 1vh;
+  }
+
+}
+
+  /*------------------------------------------------------------------CUSOTM FULLPAGE*/
+
+
+  #fp-nav { 
+  	top: 89% 	!important;
+  	opacity: 0.5 !important;
+  }
+
+  .fp-slidesNav{
+  	left: 20px !important;
+  	opacity: 0.5 !important;
+  }
+
+  .fp-slidesNav.bottom {
+  	bottom: 8px !important;
+  }
+
+  #fp-nav ul li,
+  .fp-slidesNav ul li {
+
+  	margin: 2px !important;
+
+  }
+
+  #fp-nav ul li a.active span,
+  .fp-slidesNav ul li a.active span,
+  #fp-nav ul li:hover a.active span,
+  .fp-slidesNav ul li:hover a.active span{
+  	height: 8px !important;
+  	width: 8px !important;
+  	margin: -4px 0 0 -4px !important;
+  }
+
+
+  #fp-nav ul li .fp-tooltip {
+
+  	color: black !important;
+  	font-family: "Orator Std", Helvetica, Arial, sans-serif !important;
+
+  }
+
+  .fp-tooltip {
+
+  	top: 2px !important	;
+
+  }
+
+
+
